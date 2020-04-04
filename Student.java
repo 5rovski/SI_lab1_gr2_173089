@@ -1,3 +1,7 @@
+package si2020;
+
+import java.util.List;
+
 class Student {
     String index;
     String firstName;
@@ -53,6 +57,7 @@ class Student {
             sum += grades.get(i);
         }
         average = sum/grades.size();
+        return average;
     }
 
     public int ECTSCredits() {
@@ -63,5 +68,6 @@ class Student {
                 credits += 6;
             }
         }
+        return credits;
     }
 }
