@@ -1,7 +1,3 @@
-package si2020;
-
-import java.util.List;
-
 class Student {
     String index;
     String firstName;
