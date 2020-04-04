@@ -47,8 +47,8 @@ class Student {
 
     public double getAverage() {
         //TODO
-        int average = 0;
-        int sum = 0;
+        double average = 0;
+        double sum = 0;
         for(int i=0;i<grades.size();i++){
             sum += grades.get(i);
         }
@@ -65,5 +65,28 @@ class Student {
             }
         }
         return credits;
+    }
+}
+
+class Faculty{
+    List<Student> students;
+    String facultyName;
+
+    public void addStudent(Student nov){
+        students.add(nov);
+    }
+
+    public void removeStudent(Student otpisan){
+        students.remove(otpisan);
+    }
+
+    public double averageAll(){
+        double average = 0;
+        double sum = 0;
+        for(Student s: students){
+            sum += s.getAverage();
+        }
+        average = sum/students.size();
+        return average;
     }
 }
